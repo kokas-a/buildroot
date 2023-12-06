@@ -3,6 +3,11 @@
 auto lo
 iface lo inet loopback
 
+auto eth0
+ifece eth0 inet static
+    inet 10.0.0.5
+    netmask 255.255.255.0
+
 auto can0
 iface can0 inet manual
     pre-up /sbin/ip link set can0 type can bitrate 500000
