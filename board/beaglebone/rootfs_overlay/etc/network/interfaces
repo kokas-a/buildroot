@@ -4,8 +4,8 @@ auto lo
 iface lo inet loopback
 
 auto eth0
-ifece eth0 inet static
-    inet 10.0.0.5
+iface eth0 inet static
+    address 10.0.0.5
     netmask 255.255.255.0
 
 auto can0
