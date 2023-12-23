@@ -204,52 +204,43 @@
 		#size-cells = <1>;
 		partition@0 {
 			label = "spl";
-			reg = <0x0 0x20000>;
+			reg = <0x00000000 0x000020000>;
 		};
-
 		partition@1 {
-			label = "spl_backup1";
-			reg = <0x20000 0x20000>;
+			label = "spl-backup1";
+			reg = <0x00020000 0x00020000>;
 		};
-
 		partition@2 {
-			label = "spl_backup2";
-			reg = <0x40000 0x20000>;
+			label = "spl-backup2";
+			reg = <0x00040000 0x00020000>;
 		};
-
 		partition@3 {
-			label = "spl_backup3";
-			reg = <0x60000 0x20000>;
+			label = "spl-backup3";
+			reg = <0x00060000 0x00020000>;
 		};
-
 		partition@4 {
-			label = "u-boot";
-			reg = <0x80000 0x1c0000>;
+			label = "u-boot-spl-os";
+			reg = <0x00080000 0x00040000>;
 		};
-
 		partition@5 {
-			label = "bootenv";
-			reg = <0x240000 0x20000>;
+			label = "u-boot";
+			reg = <0x000C0000 0x00100000>;
 		};
-		
 		partition@6 {
-			label = "fdt";
-			reg = <0x260000 0x20000>;
+			label = "u-boot-env";
+			reg = <0x001C0000 0x00020000>;
 		};
-
 		partition@7 {
-			label = "kernel";
-			reg = <0x280000 0x500000>;
+			label = "u-boot-env.backup1";
+			reg = <0x001E0000 0x00020000>;
 		};
-
 		partition@8 {
-			label = "root";
-			reg = <0x800000 0x1400000>;
+			label = "kernel";
+			reg = <0x00200000 0x00800000>;
 		};
-		
 		partition@9 {
-			label = "config";
-			reg = <0x1c00000 0x1400000>;
+			label = "file-system";
+			reg = <0x00A00000 0x07600000>;
 		};
 	};
 };
